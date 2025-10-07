@@ -10,3 +10,11 @@ body {
 *,*::after,*::before {
   box-sizing: inherit;
 }
+
+.content-padding {
+  @apply px-5 py-5 md:px-10 md:py-5
+}
+
+.header-margin {
+  @apply mt-[66px]
+}
