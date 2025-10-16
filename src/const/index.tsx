@@ -1,4 +1,4 @@
-import { CardIcon, StackIcon } from "@/icons/Icons";
+import { BoxIcon, CardIcon, LightningIcon, PeopleIcon, StackIcon } from "@/icons/Icons";
 
 export const NavbarLinks:NavbarLink[] = [
   {
@@ -15,14 +15,38 @@ export const NavbarLinks:NavbarLink[] = [
         label: 'decks',
         url: '/decks',
         desc: 'All public decks',
-        icon: <StackIcon size={20} style="" />
+        icon: <StackIcon size={25} style="" />
       },
       {
         label: 'cards',
         url: '/cards',
         desc: 'Explore all cards',
-        icon: <CardIcon size={20} style="" />
-      }
+        icon: <CardIcon size={25} style="" />
+      },
+      {
+        label: 'commander precons',
+        url: '/precons',
+        desc: 'View all commander precons',
+        icon: <BoxIcon size={25} style="" />
+      },
+      {
+        label: 'packages',
+        url: '/packages',
+        desc: 'All public packages',
+        icon: <LightningIcon size={25} style="" />
+      },
+      {
+        label: 'other precons',
+        url: '/precons',
+        desc: 'View all other precons',
+        icon: <BoxIcon size={25} style="" />
+      },
+      {
+        label: 'Brewers',
+        url: '/users',
+        desc: 'Find the next brewing genius',
+        icon: <PeopleIcon size={25} style="" />
+      },
     ]
   },
   {

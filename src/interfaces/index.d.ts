@@ -11,6 +11,6 @@ interface NavbarDropdown extends Link {
 interface NavbarLink {
   label: string,
   url: string,
-  isDropdown: boolean,
+  isDropdown?: boolean,
   dropdown?: NavbarDropdown[]
 }
