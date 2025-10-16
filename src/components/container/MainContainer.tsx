@@ -1,13 +1,18 @@
+'use client'
 import React from 'react'
-import AppContainer from './AppContainer'
+import { useUtilityStore } from '@/lib/zustand/utility';
+import MobileNavbar from '../MobileNavbar';
 
 const MainContainer = ({children}:{children:React.ReactNode}) => {
+  const {isClick} = useUtilityStore();
+
   return (
-    <AppContainer>
-      <div className="max-w-[1440px] mx-auto">
-        {children}
-      </div>
-    </AppContainer>
+    <div className="relative">
+      {/* mobile navbar */}
+      <MobileNavbar />
+      
+      {children}
+    </div>
   )
 }
 

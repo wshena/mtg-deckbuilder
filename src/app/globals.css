@@ -16,5 +16,9 @@ body {
 }
 
 .header-margin {
-  @apply mt-[66px]
+  @apply mt-[75.56px]
+}
+
+.navbar-height-padding {
+  @apply pt-[75.56px]
 }

@@ -1,13 +1,12 @@
 'use client'
 import React, { useState } from 'react'
-import MainContainer from './container/MainContainer'
 import Logo from './Logo'
 import { NavbarLinks } from '@/const'
 import Link from 'next/link'
 import { TriangleDownIcon, TriangleRightIcon, TriangleUpIcon } from '@/icons/Icons'
-import styles from '@/styles/Navbar.module.css'
 import SearchButton from './buttons/SearchButton'
 import MenuButton from './buttons/MenuButton'
+import ContentContainer from './container/ContentContainer'
 
 const DesktopDropdownLink = ({content}:{content:NavbarDropdown}) => {
   return (
@@ -42,7 +41,7 @@ const Navbar = () => {
   const handleClick = () => setClick(!click);
 
   return (
-    <MainContainer>
+    <ContentContainer>
       <div className='text-sm lg:text-md w-full text-white flex items-center justify-between px-5 py-3 md:px-10 md:py-3'>
         <nav className='flex items-center gap-5'>
           <Logo />
@@ -55,7 +54,7 @@ const Navbar = () => {
                     {click ? (<TriangleUpIcon size={20} style='text-white' /> ) : (<TriangleDownIcon size={20} style='text-white' /> )}
                   </button>
                 ) : (
-                  <Link href={item.url} className={`capitalize ${styles.navLink}`}>{item.label}</Link>
+                  <Link href={item.url} className={`capitalize`}>{item.label}</Link>
                 )}
 
                 {/* desktop dropdown */}
@@ -65,13 +64,13 @@ const Navbar = () => {
           </ul>
         </nav>
         <div className="flex items-center gap-5">
-          <Link href={'/login'} className={`hidden lg:inline capitalize ${styles.navLink}`}>login</Link>
-          <Link href={'/signin'} className={`hidden lg:inline capitalize ${styles.navLink}`}>sign in</Link>
+          <Link href={'/login'} className={`hidden lg:inline capitalize`}>login</Link>
+          <Link href={'/signin'} className={`hidden lg:inline capitalize`}>sign in</Link>
           <SearchButton />
           <MenuButton />
         </div>
       </div>
-    </MainContainer>
+    </ContentContainer>
   )
 }
 

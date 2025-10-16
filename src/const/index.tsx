@@ -55,3 +55,38 @@ export const NavbarLinks:NavbarLink[] = [
     isDropdown: false,
   }
 ]
+
+export const MobileNavbarLinks:NavbarLink[] = [
+  {
+    label: 'home',
+    url: '/',
+  },
+  {
+    label: 'explore decks',
+    url: '/decks',
+  },
+  {
+    label: 'explore cards',
+    url: '/cards',
+  },
+  {
+    label: 'explore commander precons',
+    url: '/precons',
+  },
+  {
+    label: 'explore another precons',
+    url: '/precons',
+  },
+  {
+    label: 'explore packages',
+    url: '/packages',
+  },
+  {
+    label: 'explore brewers',
+    url: '/users',
+  },
+  {
+    label: 'help',
+    url: '/help',
+  },
+]

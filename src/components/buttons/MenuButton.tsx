@@ -1,14 +1,41 @@
-import { MenuIcon } from '@/icons/Icons'
 import React from 'react'
-import styles from '@/styles/Navbar.module.css'
+import { CancelIcon, MenuIcon } from '@/icons/Icons'
+import { useUtilityStore } from '@/lib/zustand/utility'
 
 const MenuButton = () => {
+  const { isClick, setIsClick, resetIsClick } = useUtilityStore();
+
+  const handleToggle = () => {
+    if (isClick.value && isClick.label === 'mobile-nav') {
+      resetIsClick();
+    } else {
+      setIsClick({
+        label: 'mobile-nav',
+        value: true,
+      });
+    }
+  };
+
+  const isMenuOpen = isClick.value && isClick.label === 'mobile-nav';
+  
   return (
-    <button className={`flex lg:hidden items-center gap-3 ${styles.navLink}`}>
-      <MenuIcon size={25} style='text-white' />
-      <span className='hidden md:inline'>Menu</span>
+    <button 
+      onClick={handleToggle}
+      className={`flex lg:hidden items-center gap-3`}
+    >
+      {isMenuOpen ? (
+        <>
+          <CancelIcon size={25} style='text-white' />
+          <span className='hidden md:inline'>Close</span>
+        </>
+      ) : (
+        <>
+          <MenuIcon size={25} style='text-white' />
+          <span className='hidden md:inline'>Menu</span>
+        </>
+      )}
     </button>
-  )
+  );
 }
 
-export default MenuButton
+export default MenuButton;

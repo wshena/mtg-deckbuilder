@@ -4,6 +4,7 @@ import { VscTriangleDown, VscTriangleUp, VscTriangleRight } from "react-icons/vs
 import { FaMagnifyingGlass, FaBox, FaBoltLightning } from "react-icons/fa6";
 import { IoMenu } from "react-icons/io5";
 import { IoIosPeople } from "react-icons/io";
+import { MdCancel } from "react-icons/md";
 
 export const PeopleIcon = ({size, style}:{size:number, style:string}) => {
   return <IoIosPeople size={size} className={style} />
@@ -15,6 +16,10 @@ export const LightningIcon = ({size, style}:{size:number, style:string}) => {
 
 export const BoxIcon = ({size, style}:{size:number, style:string}) => {
   return <FaBox size={size} className={style} />
+}
+
+export const CancelIcon = ({size, style}:{size:number, style:string}) => {
+  return <MdCancel size={size} className={style} />
 }
 
 export const MenuIcon = ({size, style}:{size:number, style:string}) => {
